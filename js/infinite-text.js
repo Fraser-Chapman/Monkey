@@ -13,8 +13,14 @@ function stopTyping() {
     clearInterval(intervalId);
 }
 
+function reset() {
+    monkeyTyping = false;
+    intervalId = undefined;
+    document.getElementById('monkey-output').innerHTML = '';
+}
+
 function appendCharToOutput(char) {
-    document.getElementById("monkey-output").innerHTML += char;
+    document.getElementById('monkey-output').innerHTML += char;
 }
 
 function getRandomChar() {
