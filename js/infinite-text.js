@@ -15,7 +15,7 @@ function stopTyping() {
 }
 
 function reset() {
-    monkeyTyping = false;
+    stopTyping();
     intervalId = undefined;
     document.getElementById('monkey-output').innerHTML = '';
 }
