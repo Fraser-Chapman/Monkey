@@ -1,11 +1,12 @@
-const characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "."];
+const characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '.'];
+const waitTimeBetweenExecutionsInMS = 500;
 
 var monkeyTyping = false;
 var intervalId;
 
 function startTyping() {
     monkeyTyping = true;
-    intervalId = setInterval(function () {appendCharToOutput(getRandomChar())}, 500);
+    intervalId = setInterval(function () {appendCharToOutput(getRandomChar())}, waitTimeBetweenExecutionsInMS);
 }
 
 function stopTyping() {
