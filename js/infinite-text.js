@@ -9,15 +9,9 @@ function startTyping() {
     intervalId = setInterval(function () {appendCharToOutput(getRandomChar())}, waitTimeBetweenExecutionsInMS);
 }
 
-function stopTyping() {
-    monkeyTyping = false;
-    clearInterval(intervalId);
-}
-
-function reset() {
-    stopTyping();
-    intervalId = undefined;
-    document.getElementById('monkey-output').innerHTML = '';
+function getRandomChar() {
+    const randomIndex = Math.round(Math.random() * (characters.length - 1));
+    return characters[randomIndex];
 }
 
 function appendCharToOutput(char) {
@@ -29,7 +23,13 @@ function scrollToBottom() {
     window.scrollTo(0, document.body.scrollHeight);
 }
 
-function getRandomChar() {
-    const randomIndex = Math.round(Math.random() * (characters.length - 1));
-    return characters[randomIndex];
+function stopTyping() {
+    monkeyTyping = false;
+    clearInterval(intervalId);
+}
+
+function reset() {
+    stopTyping();
+    intervalId = undefined;
+    document.getElementById('monkey-output').innerHTML = '';
 }
