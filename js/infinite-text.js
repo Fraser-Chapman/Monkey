@@ -1,5 +1,6 @@
 const characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '.'];
 const waitTimeBetweenExecutionsInMS = 100;
+const outputLabel = 'monkey-output';
 
 var intervalId;
 
@@ -13,7 +14,7 @@ function getRandomChar() {
 }
 
 function appendCharToOutput(char) {
-    document.getElementById('monkey-output').innerHTML += char;
+    document.getElementById(outputLabel).innerHTML += char;
     scrollToBottom();
 }
 
@@ -28,5 +29,5 @@ function stopTyping() {
 function reset() {
     stopTyping();
     intervalId = undefined;
-    document.getElementById('monkey-output').innerHTML = '';
+    document.getElementById(outputLabel).innerHTML = '';
 }
