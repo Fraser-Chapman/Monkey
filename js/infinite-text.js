@@ -2,10 +2,14 @@ const characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
 const waitTimeBetweenExecutionsInMS = 100;
 const outputLabel = 'monkey-output';
 
+var computerTyping = false;
 var intervalId;
 
 function startTyping() {
-    intervalId = setInterval(function () {appendCharToOutput(getRandomChar())}, waitTimeBetweenExecutionsInMS);
+    if (!computerTyping) {
+        computerTyping = true;
+        intervalId = setInterval(function () {appendCharToOutput(getRandomChar())}, waitTimeBetweenExecutionsInMS);
+    }
 }
 
 function getRandomChar() {
@@ -23,6 +27,7 @@ function scrollToBottom() {
 }
 
 function stopTyping() {
+    computerTyping = false;
     clearInterval(intervalId);
 }
 
