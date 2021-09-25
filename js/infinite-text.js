@@ -22,6 +22,11 @@ function reset() {
 
 function appendCharToOutput(char) {
     document.getElementById('monkey-output').innerHTML += char;
+    scrollToBottom();
+}
+
+function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 function getRandomChar() {
