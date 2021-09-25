@@ -30,12 +30,8 @@ button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-}
-
 .card {
+    margin: 1%;
     background-color: rgb(41, 42, 48);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-height: 150px;
