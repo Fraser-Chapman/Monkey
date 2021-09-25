@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #24252A;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,7 +13,7 @@ body {
 }
 
 #monkey-output {
-    color: white;
+    color: black;
 }
 
 button {
@@ -32,7 +32,7 @@ button:hover {
 
 .card {
     margin: 1%;
-    background-color: rgb(41, 42, 48);
+    background-color: rgb(229, 230, 235);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-height: 150px;
     width:45%;
