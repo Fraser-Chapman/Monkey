@@ -42,7 +42,6 @@ button:hover {
     width:45%;
     border-radius: 5px;
     transition: 0.3s;
-    overflow-wrap: break-word;
 }
 
 .card-content {
